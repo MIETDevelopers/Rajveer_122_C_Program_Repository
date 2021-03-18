@@ -1,5 +1,5 @@
-#include<stdio.h>
+#include<stdio.h>//header file
 int main() {
-	printf("hello world");
+	printf("hello world");//printing hello world 
 	return 0;
 }
