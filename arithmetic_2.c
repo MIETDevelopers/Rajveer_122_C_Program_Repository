@@ -10,21 +10,21 @@ int main(){
     switch(operator)
     {
         case '+':
-            printf("%.lf + %.lf = %.lf",a, b, a+b);
+            printf("%.lf + %.lf = %.lf",a, b, a+b);//addition function
             break;
 
         case '-':
-            printf("%.lf - %.lf = %.lf",a, b, a-b);
+            printf("%.lf - %.lf = %.lf",a, b, a-b);//subtraction funtion
             break;
 
         case '*':
-            printf("%.lf * %.lf = %.lf",a, b, a*b);
+            printf("%.lf * %.lf = %.lf",a, b, a*b);//multiplication function
             break;
 
         case '/':
-            printf("%.lf / %.lf = %.lf",a, b, a/b);
+            printf("%.lf / %.lf = %.lf",a, b, a/b);//division function
             break;
-    printf("Error encountered by the input values");
+    printf("Error encountered by the input values");//default
     }
     return 0;
 }
