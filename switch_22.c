@@ -1,43 +1,61 @@
-//C program to create Simple Calculator using switch case
-#include <stdio.h> //header file
-int main() //main function
+//C Program to Create Simple Calculator using Switch Case 
+ 
+#include <stdio.h>//header file
+//function declaration
+float add(float a, float b);
+float sub(float a, float b);
+float multi(float a, float b);
+float div(float a, float b);
+
+int main()
 {
-    char op;
-    float num1, num2, result=0.0f;
-
-    /* Print welcome message */
-    printf("WELCOME TO SIMPLE CALCULATOR\n");
-    printf("----------------------------\n");
-    printf("Enter [number 1] [+ - * /] [number 2]\n");
-
-    /* Input two number and operator from user */
-    scanf("%f %c %f", &num1, &op, &num2);
-
-    /* Switch the value and perform action based on operator*/
-    switch(op)
+    char Operator;
+    float num1, num2, result = 0;
+    
+    printf("\n Please Enter an Operator (+, -, *, /)  :  ");
+    scanf("%c", &Operator);
+    
+    printf("\n Please Enter the Values for two Operands: num1 and num2  :  ");
+    scanf("%f%f", &num1, &num2);
+    
+    switch(Operator)
     {
-        case '+': 
-            result = num1 + num2;
+        case '+':
+            result = add(num1, num2);//addition operation
             break;
-
-        case '-': 
-            result = num1 - num2;
+        case '-':
+            result = sub(num1, num2);//subtraction operation
+            break;              
+        case '*':
+            result = multi(num1, num2);//multiplication operation
             break;
-
-        case '*': 
-            result = num1 * num2;
+        case '/':
+            result = div(num1, num2);//division operation
             break;
-
-        case '/': 
-            result = num1 / num2;
-            break;
-
-        default: 
-            printf("Invalid operator");
+        default:
+            printf("\n You have enetered an Invalid Operator ");//default                                
     }
-
-    /* Prints the result */
-    printf("%.2f %c %.2f = %.2f", num1, op, num2, result);
-
+  
+    printf("\n The result of %.2f %c %.2f  = %.2f", num1, Operator, num2, result);
+    
     return 0;
+}
+float add(float a, float b)
+{
+    return a + b;
+}
+
+float sub(float a, float b)
+{
+    return a - b;
+}
+
+float multi(float a, float b)
+{
+    return a * b;
+}
+
+float div(float a, float b)
+{
+    return a / b;
 }
