@@ -1,7 +1,7 @@
-#include<stdio.h>
-int main()
+#include<stdio.h> //Pre-Process directive to include standard input output header file
+int main() //main fuction body starting
 {
-   int n, i, count = 0;
+   int n, i, count = 0; //variable declarartion 
  
     printf("Enter the Number.\n");
     scanf("%d",&n);//scanning the number entered by user.
@@ -16,8 +16,9 @@ int main()
         }
     }
     // output.
+   // if the condition is true, it will print the prime number
     if (count==0)
-        printf("%d is a Prime number.",n);
+        printf("%d is a Prime number.",n); 
     else
         printf("%d is not a Prime number.",n);
  
